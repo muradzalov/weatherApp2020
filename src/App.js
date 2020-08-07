@@ -59,7 +59,7 @@ function App() {
       query: city
     }
     try {
-      const response = await axios.get('http://api.weatherstack.com/current', { params })
+      const response = await axios.get('https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current', { params })
       const apiResponse = response.data;
       console.log('API response', apiResponse)
       // console.log(`The current temperature in ${params.query} is ${apiResponse.current.temperature} degrees Celsius`)
