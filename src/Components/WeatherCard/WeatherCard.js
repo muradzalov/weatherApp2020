@@ -2,9 +2,8 @@ import React from 'react'
 
 export default function WeatherCard(props) {
 
-  console.log('weatherCard props', props)
 
-  const { humidity, temperature, weatherDescription, country, localTime, weatherIcon } = props.weatherInformation;
+  const { humidity, temperature, weatherDescription, country, localTime, weatherIcon, city } = props.weatherInformation;
 
   return (
     // { Object.keys(props.weatherInformation).length }
@@ -43,7 +42,7 @@ export default function WeatherCard(props) {
         </div>
 
           <div>
-            Country:
+            Location:
         </div>
 
           <div>
@@ -58,11 +57,11 @@ export default function WeatherCard(props) {
           fontSize: '20px'
         }}>
           <div>
-            {humidity && humidity}
+            {humidity && humidity}%
           </div>
 
           <div>
-            {temperature && temperature}
+            {temperature && temperature}°F
           </div>
 
           <div>
@@ -70,7 +69,7 @@ export default function WeatherCard(props) {
           </div>
 
           <div>
-            {country && country}
+            {city && city}, {country && country}
           </div>
 
           <div>

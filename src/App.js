@@ -3,7 +3,6 @@ import './App.css';
 import SearchComponent from './Components/SearchComponent/SearchComponent'
 import Unsplash from 'unsplash-js';
 import { useState, useEffect } from 'react';
-// import { getWeather } from '../src/Utilities'
 import axios from 'axios'
 import WeatherCard from '../src/Components/WeatherCard/WeatherCard'
 import ErrorHandler from '../src/Components/ErrorHandler/ErrorHandler'
@@ -20,10 +19,10 @@ function App() {
   y = function to update the state
   useState([]) = the only argument to the useState() Hook is the initial state
 
-  Moreover:
-    this.x = this.state
-    this.y = this.setState()
-    this.useState = initial state
+  Moreover, how this new hooks approach equates to class-based components:
+    x = this.state
+    y = this.setState()
+    useState = initial state
   */
 
   const [images, setImages] = useState([])
@@ -77,9 +76,10 @@ function App() {
 
       const weatherObject = {
         humidity: apiResponse.current.humidity,
-        temperature: apiResponse.current.temperature,
+        temperature: 9/5 * apiResponse.current.temperature + 32,
         weatherDescription: apiResponse.current.weather_descriptions,
         country: apiResponse.location.country,
+        city: apiResponse.location.name,
         localTime: apiResponse.location.localtime,
         weatherIcon: apiResponse.current.weather_icons[0]
       }
