@@ -3,10 +3,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url('./Static/2560x1440-forest-mountains-sunset-cool-weather-minimalism-4k_1540749795.jpg'); 
+  /* background-image: url('./Static/2560x1440-forest-mountains-sunset-cool-weather-minimalism-4k_1540749795.jpg'); 
   background-position: center center; 
-  background-size: 100% 100%;
-  height: 100vh
+  background-size: 100% 100%; */
+  height: 100vh 
 }
 
 .sample-image{
@@ -32,7 +32,13 @@
   100% { transform: rotate(360deg); }
 }
 
-/* .particles {
-  width: 100;
-  height: 100;
-} */
+#tsparticles {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}

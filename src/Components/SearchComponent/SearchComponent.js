@@ -29,7 +29,7 @@ const SearchComponent = props => {
             borderRadius: '10px',
             fontSize: '18px',
             paddingLeft: '16px',
-            boxShadow: '10px 5px 5px red'
+            boxShadow: '3px 3px 3px'
           }}
           className='searchbar'
           type="search"

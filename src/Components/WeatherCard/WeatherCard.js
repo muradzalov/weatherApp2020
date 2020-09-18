@@ -1,4 +1,5 @@
 import React from 'react'
+import './WeatherCard.css'
 
 export default function WeatherCard(props) {
 
@@ -29,23 +30,23 @@ export default function WeatherCard(props) {
         fontSize: '20px'
       }}>
         <div>
-          <div>
+          <div className='weather-text'>
             Humidity:
         </div>
 
-          <div>
+          <div className='weather-text'>
             Temperature:
         </div>
 
-          <div>
+          <div className='weather-text'>
             Weather Description:
         </div>
 
-          <div>
+          <div className='weather-text'>
             Location:
         </div>
 
-          <div>
+          <div className='weather-text'>
             Local Time:
         </div>
         </div>
@@ -56,23 +57,23 @@ export default function WeatherCard(props) {
           flexDirection: 'column',
           fontSize: '20px'
         }}>
-          <div>
+          <div className='weather-text'>
             {humidity && humidity}%
           </div>
 
-          <div>
+          <div className='weather-text'>
             {temperature && temperature}°F
           </div>
 
-          <div>
+          <div className='weather-text'>
             {weatherDescription && weatherDescription}
           </div>
 
-          <div>
+          <div className='weather-text'>
             {city && city}, {country && country}
           </div>
 
-          <div>
+          <div className='weather-text'>
             {localTime && (new Date(localTime).toLocaleString())}
           </div>
         </div>
