@@ -1,11 +1,11 @@
 import React from 'react'
 import './SearchComponent'
-import { countryList } from '../../Utilities'
+// import { countryList } from '../../Utilities'
 import '../../App.css'
 
 const SearchComponent = props => {
 
-  const { setSearchInput, searchInput, setCountry, getImagesAndWeather, isLoading } = props;
+  const { setSearchInput, searchInput, getImagesAndWeather, isLoading } = props;
   // const setSearchInput = props.setSearchInput
   // const searchInput = props.searchInput
   // const setCountry = props.setCountry
@@ -104,3 +104,9 @@ Keys:
 -Country
 -Local time
 */
+
+// const data = {
+
+//   Springfield: [United States, Latvia, Canada]
+
+// }

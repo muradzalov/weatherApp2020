@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios'
 import WeatherCard from '../src/Components/WeatherCard/WeatherCard'
 import ErrorHandler from '../src/Components/ErrorHandler/ErrorHandler'
+import Particles from "react-tsparticles";
 
 //******* ALT + SHIFT + F automatically formats all your code */
 
@@ -76,7 +77,7 @@ function App() {
 
       const weatherObject = {
         humidity: apiResponse.current.humidity,
-        temperature: 9/5 * apiResponse.current.temperature + 32,
+        temperature: 9 / 5 * apiResponse.current.temperature + 32,
         weatherDescription: apiResponse.current.weather_descriptions,
         country: apiResponse.location.country,
         city: apiResponse.location.name,
@@ -115,10 +116,61 @@ function App() {
   let errorColor = 'red'
 
   return (
+
     <div className="container">
       {/* setSearchInput = {setSearchInput} 
           KEY on the props object = value from the parent
       */}
+
+
+      {/* <Particles className='particles'
+        id="tsparticles"
+        options={{
+          background: {
+            color: {
+              value: "#282d4a",
+            },
+          },
+          fpsLimit: 60,
+          particles: {
+            color: {
+              value: "#ffffff",
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outMode: "bounce",
+              random: false,
+              speed: 1,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                value_area: 800,
+              },
+              value: 80,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              random: true,
+              value: 2,
+            },
+          },
+          detectRetina: true,
+        }}
+      /> */}
+
+
+
+
+
+
 
       {/* An array that has a length of the number of keys on that object */}
       {Object.keys(weatherInformation).length ?

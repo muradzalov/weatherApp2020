@@ -18,3 +18,4 @@ export default function ErrorHandler({errorMessage, errorColor}) {
       </div>
   )
 }
+
