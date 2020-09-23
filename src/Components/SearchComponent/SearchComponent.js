@@ -31,6 +31,7 @@ const SearchComponent = props => {
             paddingLeft: '16px',
             boxShadow: '3px 3px 3px'
           }}
+          placeholder="Enter city here"
           className='searchbar'
           type="search"
           value={searchInput}

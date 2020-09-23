@@ -11,6 +11,7 @@
 
 .sample-image{
   width: 500px;
+  border-radius: 10px;
 }
 
 .margin-top-24{
@@ -41,4 +42,12 @@
     left: 0;
     top: 0;
     z-index: -1;
+}
+
+.title {
+  margin-bottom: 30px;
+  letter-spacing: -2px;
+  font-size: 40px;
+  font-weight: 800;
+  color: rgb(87, 158, 0);
 }

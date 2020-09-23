@@ -30,16 +30,20 @@ function App() {
   const [images, setImages] = useState([])
   const [searchInput, setSearchInput] = useState('')
   const [showImage, setShowImage] = useState(0)
-  const [country, setCountry] = useState('')
+  // const [country, setCountry] = useState('')
   const [isLoading, setLoading] = useState(false)
   const [weatherInformation, setWeatherInformation] = useState({})
   const [errorScreen, setErrorScreen] = useState(false)
 
+
+
+
+
   // searchInput will only use 'Cairo' if searchInput is undefined; when we are calling it by clicking search, we are passing an empty string, which is not undefined. The ternary a few lines below checks to see if the value is undefined. Again, the first check is to replace an undefined value, while the second is to replace empty strings.
-  const getImagesAPI = async (searchInput = 'Cairo', max = 25) => {
+  const getImagesAPI = async (searchInput = 'Rome', max = 25) => {
 
     // Checking to see if there is a non-blank entry being searched for
-    searchInput = searchInput.length > 0 ? searchInput : 'Cairo'
+    searchInput = searchInput.length > 0 ? searchInput : 'Rome'
 
     try {
       const response = await unsplash.search.photos(`${searchInput}`, 1, max)
@@ -52,9 +56,18 @@ function App() {
     }
   }
 
+  // Helper function to generate a random number from 0 to our max
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max)
+  }
+
+
+
+
+
   // Get weather information from API call
-  const getWeather = async (city = 'Cairo') => {
-    city = city.length > 0 ? city : 'Cairo'
+  const getWeather = async (city = 'Rome') => {
+    city = city.length > 0 ? city : 'Rome'
     const params = {
       access_key: 'e834c9f23a91900f6eb844f00649ece5',
       query: city
@@ -96,10 +109,7 @@ function App() {
     }
   }
 
-  // Helper function to generate a random number from 0 to our max
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max)
-  }
+
 
   // Pass in the typed-in city name into our temperature query API
   // getWeather(searchInput)
@@ -124,6 +134,10 @@ function App() {
           KEY on the props object = value from the parent
       */}
 
+      <div className='title'>
+        GeoWeather
+      </div>
+
       {/* An array that has a length of the number of keys on that object */}
       {Object.keys(weatherInformation).length ?
         <WeatherCard
@@ -134,7 +148,7 @@ function App() {
       <SearchComponent
         setSearchInput={setSearchInput}
         searchInput={searchInput}
-        setCountry={setCountry}
+        // setCountry={setCountry}
         getImagesAndWeather={getImagesAndWeather}
         isLoading={isLoading}
       />
