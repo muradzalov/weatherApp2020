@@ -14,7 +14,7 @@ export default function ErrorHandler({errorMessage, errorColor}) {
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-      {errorMessage ? errorMessage : 'Default error message'}
+      {errorMessage ? errorMessage : 'Please type in a valid city name'}
       </div>
   )
 }
