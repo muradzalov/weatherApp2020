@@ -1,5 +1,5 @@
 ### `Deployed Site`
-Deployed link available at https://weather-app-mz-2020.netlify.app/
+Deployed site available at https://weather-app-mz-2020.netlify.app/
 
 ### `Description`
 GeoWeather is a web application I developed that fetches temperature, weather conditions, and city image based on a user's input. The frontend is built using modular React components and styled with CSS. I used React Hooks in this application to learn first-hand about the benefits of foregoing 'this' context and method binding. This application is deployed using Netlify.
