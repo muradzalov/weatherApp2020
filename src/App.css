@@ -6,16 +6,18 @@
   /* background-image: url('./Static/2560x1440-forest-mountains-sunset-cool-weather-minimalism-4k_1540749795.jpg'); 
   background-position: center center; 
   background-size: 100% 100%; */
-  height: 100vh 
+  height: 100vh;
 }
 
-.sample-image{
+.sample-image {
   width: 500px;
   border-radius: 10px;
 }
 
-.margin-top-24{
+.margin-top-24 {
   margin-top: 24px;
+  height: 350px;
+  width: auto;
 }
 
 .loader {
@@ -29,19 +31,23 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #tsparticles {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    left: 0;
-    top: 0;
-    z-index: -1;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
 
 .title {
