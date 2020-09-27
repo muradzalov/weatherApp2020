@@ -9,11 +9,13 @@ import ErrorHandler from "../src/Components/ErrorHandler/ErrorHandler";
 import Particles from "react-tsparticles";
 import particlesOptions from "./particles.json";
 
+
 //******* ALT + SHIFT + F automatically formats all your code */
 
 const unsplash = new Unsplash({
   accessKey: "wwtB_0O_CeH497g2BSnXeScVM75yPrrWr729uayVWHQ",
 });
+
 
 function App() {
   /* 
@@ -28,6 +30,8 @@ function App() {
     useState = initial state
   */
 
+
+
   const [images, setImages] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [showImage, setShowImage] = useState(0);
@@ -35,6 +39,8 @@ function App() {
   const [isLoading, setLoading] = useState(false);
   const [weatherInformation, setWeatherInformation] = useState({});
   const [errorScreen, setErrorScreen] = useState(false);
+
+
 
   // searchInput will only use 'Cairo' if searchInput is undefined; when we are calling it by clicking search, we are passing an empty string, which is not undefined. The ternary a few lines below checks to see if the value is undefined. Again, the first check is to replace an undefined value, while the second is to replace empty strings.
   const getImagesAPI = async (searchInput = "Rome", max = 25) => {
@@ -51,10 +57,15 @@ function App() {
     }
   };
 
+
+
   // Helper function to generate a random number from 0 to our max
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
+
+
+
 
   // Get weather information from API call
   const getWeather = async (city = "Rome") => {
@@ -102,6 +113,9 @@ function App() {
     }
   };
 
+
+
+
   // Pass in the typed-in city name into our temperature query API
   // getWeather(searchInput)
 
@@ -119,6 +133,9 @@ function App() {
   let errorMessage = "";
   let errorColor = "red";
 
+
+
+  
   return (
     <div className="container">
       <Particles options={particlesOptions} />
